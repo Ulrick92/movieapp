@@ -1,0 +1,10 @@
+export { default as MoviesList } from "./MoviesList";
+export { default as Casting } from "./Casting";
+export { default as MovieCard } from "./MovieCard";
+export { default as Navbar } from "./Navbar";
+export { default as Pagination } from "./Pagination";
+export { default as MiddlePagination } from "./MiddlePagination";
+export { default as SearchBar } from "./SearchBar";
+export { default as Slider } from "./Slider";
+export { default as ActorCard } from "./ActorCard";
+export { default as LoadingPage } from "./LoadingPage";

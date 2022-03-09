@@ -1,0 +1,215 @@
+/************\
+   Variable
+\************/
+
+:root {
+  --yellow-color: #fecb02;
+}
+
+/*********\
+     Reset
+  \*********/
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: 0;
+}
+
+/*********\
+    General
+  \*********/
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+/*********\
+    Header
+  \*********/
+
+.navbar {
+  padding: 1rem;
+  background: var(--yellow-color);
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.links-link a {
+  display: block;
+  padding: 1rem;
+  color: #000;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/*********\
+    Slider
+  \*********/
+
+.slider-home {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.slider-home .swiper-pagination {
+  text-align: left;
+  padding-left: 15px;
+}
+.slider-home .swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 25px;
+}
+.slider-home .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: #fff;
+}
+.slider-home .swiper-pagination-bullet-active {
+  background: var(--yellow-color);
+}
+.slider-home .slider-home-slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slider-home-slide {
+  max-height: 355px;
+  position: relative;
+}
+.slick-slide .slider-home-slide img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: inline;
+}
+.slide-caption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -380px;
+  opacity: 0;
+  width: 380px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.slider-home:hover .slide-caption {
+  left: auto;
+  right: 0;
+  opacity: 1;
+}
+.slide-caption-title * {
+  margin: 0;
+  width: 380px;
+}
+.slide-caption .slide-caption-desc {
+  text-align: justify;
+}
+.slide-caption-info {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 5px;
+  color: #ccc;
+  margin: 0 0 10px;
+}
+.slide-caption-button {
+  border-radius: 4px;
+  border: none;
+  background: var(--yellow-color);
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+}
+
+/*********\
+     Films
+  \*********/
+
+.container-films ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.flip-box {
+  perspective: 1000px;
+  width: 185px;
+  height: 278px;
+  margin: 5px;
+}
+.flip-box img {
+  border-radius: 4px;
+  height: 278px;
+}
+.flip-box .flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+.flip-box-inner .flip-box-front,
+.flip-box-inner .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 4px;
+  border: 0;
+  overflow: hidden;
+}
+.flip-box-back {
+  background: #595959;
+  color: #fff;
+  transform: rotateY(180deg);
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.flip-box-back .more {
+  color: var(--yellow-color);
+  text-decoration: underline;
+  font-weight: 500;
+}
+.flip-box-back > div {
+  width: 100%;
+  padding: 0 5px;
+}
